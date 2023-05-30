@@ -1,0 +1,12 @@
+<form hx-post="{% url 'create_task' %}"
+  hx-target="#tasks"
+  hx-swap="outerHTML"
+  class="d-flex align-items-center"
+  method="POST">
+  <input type="text" name="description" class="form-control-sm mr-2" placeholder="Enter task" hx-trigger="keyup" hx-target="#name-exist"/>
+  <button hx-post='{% url "create_task"%}'
+    hx-target="#tasks"
+    hx-swap="outerHTML"
+    type="submit"
+    class="btn btn-success btn-sm">Save</button>
+</form>
